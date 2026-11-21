@@ -1,4 +1,4 @@
-﻿# Legacy delivery notes
+# Legacy delivery notes
 
 This file is retained as supplemental background only. For current setup instructions, security guidance, and supported modes, follow [README.md](README.md).
 

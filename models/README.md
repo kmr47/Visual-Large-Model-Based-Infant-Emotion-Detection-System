@@ -1,4 +1,4 @@
-﻿# Model weights
+# Model weights
 
 Place authorized ViT-B/16 weight files in this directory. Model weights are intentionally not distributed with this repository because of size and licensing/privacy constraints.
 
