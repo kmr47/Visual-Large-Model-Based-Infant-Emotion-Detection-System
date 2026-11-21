@@ -1,0 +1,81 @@
+{
+  "experiment": "ViT CLS embedding offline feasibility spike",
+  "warning": "Dataset has no verified child identity groups; results are not child re-ID accuracy.",
+  "seed": 20260903,
+  "model": "C:\\Users\\adm\\.openclaw\\workspace\\emotion-detector-v2-report\\models\\vit_b16_age5_plus_age10_calibrated_best.pth",
+  "embedding_dimension": 768,
+  "images": 128,
+  "views": 512,
+  "positive_definition": "same source image under mild deterministic perturbation",
+  "negative_definition": "different source images, used only as a rough reference",
+  "same_image_augmented": {
+    "n": 384,
+    "mean": 0.985095,
+    "median": 0.993608,
+    "p05": 0.947216,
+    "p95": 0.998782,
+    "min": 0.909956,
+    "max": 0.999588
+  },
+  "different_source_reference": {
+    "n": 2000,
+    "mean": 0.139105,
+    "median": 0.120942,
+    "p05": -0.062411,
+    "p95": 0.403453,
+    "min": -0.288145,
+    "max": 0.772316
+  },
+  "threshold_scan": [
+    {
+      "threshold": 0.5,
+      "same_image_accept_rate": 1.0,
+      "different_source_accept_rate": 0.0255
+    },
+    {
+      "threshold": 0.6,
+      "same_image_accept_rate": 1.0,
+      "different_source_accept_rate": 0.013
+    },
+    {
+      "threshold": 0.65,
+      "same_image_accept_rate": 1.0,
+      "different_source_accept_rate": 0.009
+    },
+    {
+      "threshold": 0.7,
+      "same_image_accept_rate": 1.0,
+      "different_source_accept_rate": 0.0055
+    },
+    {
+      "threshold": 0.75,
+      "same_image_accept_rate": 1.0,
+      "different_source_accept_rate": 0.0015
+    },
+    {
+      "threshold": 0.8,
+      "same_image_accept_rate": 1.0,
+      "different_source_accept_rate": 0.0
+    },
+    {
+      "threshold": 0.85,
+      "same_image_accept_rate": 1.0,
+      "different_source_accept_rate": 0.0
+    },
+    {
+      "threshold": 0.9,
+      "same_image_accept_rate": 1.0,
+      "different_source_accept_rate": 0.0
+    },
+    {
+      "threshold": 0.95,
+      "same_image_accept_rate": 0.9375,
+      "different_source_accept_rate": 0.0
+    }
+  ],
+  "interpretation": [
+    "High positive similarity means the feature is stable to the tested perturbations.",
+    "Low overlap between positive and reference distributions is encouraging but insufficient for identity recognition.",
+    "A real re-ID decision requires multiple verified images per child and ROC/TPR/FAR evaluation."
+  ]
+}
